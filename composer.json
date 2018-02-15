@@ -1,5 +1,5 @@
 {
-  "name": "wubs/trakt",
+  "name": "shaffe-fr/trakt",
   "description": "Trakt API wrapper",
   "authors": [
     {
@@ -10,7 +10,7 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.4.7",
-    "illuminate/support": "~5.2",
+    "illuminate/support": "~5.5",
     "nesbot/carbon": "~1",
     "guzzlehttp/guzzle": "6.*",
     "league/oauth2-client": "~0.8",
@@ -35,5 +35,15 @@
   },
   "bin": [
     "bin/trakt"
-  ]
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wubs\\Trakt\\Providers\\Laravel\\TraktApiServiceProvider"
+      ],
+      "aliases": {
+        "Trakt": "Wubs\\Trakt\\Trakt"
+      }
+    }
+  }
 }
